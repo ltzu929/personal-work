@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <title>投资看板</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">PERSONAL MARKET BRIEF</p>
+      <h1>投资看板</h1>
+    </div>
+    <div class="freshness" id="freshness">正在读取数据…</div>
+  </header>
+
+  <main class="shell">
+    <section class="hero card">
+      <div>
+        <span class="badge" id="reportType">暂无报告</span>
+        <h2 id="headline">等待现有定时任务写入首份网页数据</h2>
+        <p id="summary">网页首版已经建立。后续睡前、早间和周度任务将把摘要与完整报告写入本目录。</p>
+      </div>
+      <div class="action-box">
+        <span>当前行动</span>
+        <strong id="action">暂无行动</strong>
+        <small id="marketState">市场状态：待更新</small>
+      </div>
+    </section>
+
+    <section class="metrics" id="metrics"></section>
+
+    <section class="grid two">
+      <article class="card">
+        <div class="section-head"><h3>持仓与委托</h3><span id="portfolioTime">未更新</span></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>标的</th><th>状态</th><th>数量</th><th>成本/限价</th><th>备注</th></tr></thead>
+            <tbody id="portfolioRows"><tr><td colspan="5" class="empty">等待持仓表同步</td></tr></tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="section-head"><h3>重点观察</h3><span>来自最新复盘</span></div>
+        <div id="watchlist" class="stack"><p class="empty">暂无观察项</p></div>
+      </article>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h3>报告时间线</h3>
+        <div class="filters" id="filters"></div>
+      </div>
+      <div id="reports" class="timeline"><p class="empty">暂无报告</p></div>
+    </section>
+  </main>
+
+  <dialog id="reportDialog">
+    <button class="close" id="closeDialog" aria-label="关闭">×</button>
+    <article id="reportContent"></article>
+  </dialog>
+
+  <footer>数据仅来自既有定时任务输出，不构成投资建议。</footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>
